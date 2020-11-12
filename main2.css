@@ -1,0 +1,17 @@
+:root{
+  --tittle-color: #28ae61;
+  --primary-color: #28ae61;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+html{
+  font-family: 'Epilogue', sans-serif;
+}
+
+body{
+  background-color: whitesmoke;
+}
