@@ -1,11 +1,8 @@
 <?php
+$host = "localhost";
+$username = "root";
+$password = "";
 
-if(isset($_POST['cep']) && !empty($_POST['cep'])){
-
-$nome  = addslashes($_POST['nome']);
-$telefone = addslashes($_POST['telefone']);
-$rfid = addslashes($_POST['rfid']);
-$cep = addslashes($_POST['cep']);
-
-}
+$conexao = mysqli_connect($host, $username, $password) or die('Erro de conexão com o banco de dados!');
+$banco = mysqli_select_db($conexao, 'recycle') or die("Não foi possível selecionar o banco de dados!");
 ?>
