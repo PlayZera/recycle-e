@@ -8,6 +8,7 @@ $rfid = $_POST['rfid'];
 $cep = $_POST['cep'];
 
 $sql = "INSERT INTO cadastro (nome, telefone, rfid, cep) VALUES ('$nome', '$telefone', '$rfid', '$cep'";
+$sql = mysqli_query($conexao, $sql);
 
 echo "<h1></h1>Cadastro foi com Sucesso!<h1>";
 echo "<h1>$nome</h1><br>";
