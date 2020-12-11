@@ -1,22 +1,16 @@
 <?php
 
-include('conexao.php');
+include "conexao.php";
 
 $nome = $_POST['nome'];
 $telefone = $_POST['telefone'];
 $rfid = $_POST['rfid'];
 $cep = $_POST['cep'];
 
-$sql = "INSERT INTO cadastro (nome, telefone, rfid, cep) VALUES ('$nome', '$telefone', '$rfid', '$cep'";
+$sql = "INSERT INTO cadastro (nome, telefone, rfid, cep) VALUES ('$nome', '$telefone', '$rfid', '$cep')";
 $sql = mysqli_query($conexao, $sql);
 
-echo "<h1></h1>Cadastro foi com Sucesso!<h1>";
-echo "<h1>$nome</h1><br>";
-echo "<h1>$telefone</h1><br>";
-echo "<h1>$rfid</h1><br>";
-echo "<h1>$cep</h1><br>";
-
-$conexao->close();
+connection_aborted();
 ?>
 
 <!DOCTYPE html>
@@ -25,10 +19,21 @@ $conexao->close();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastrando...</title>
-    <link rel="stylesheet" href="cadastro.css">
+
+    <link rel="stylesheet" href="success.css">
     <link rel="shortcut icon" href="icone.png">
 </head>
 <body>
+    <div id="bg">
+        <div id="Conteiner">
+            <h1>Cadastro feito com Sucesso!</h1><br>
+
+            <a href="index.html"><span></span> <strong>Clique aqui para voltar a página incial</strong></a>
+        </div>
+            <?php
+                echo "<h1>Parabéns $nome, agora você está pronto para jogar!</h1><br>";
+            ?>
+    </div>
     
 </body>
 </html>

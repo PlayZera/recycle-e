@@ -1,6 +1,3 @@
-<?php
-
-?>
 <!DOCTYPE html>
 <html lang="pt_BR">
 <head>
@@ -9,7 +6,7 @@
     <title>Cadastro</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/styles/cadastro.css">
+    <link rel="stylesheet" href="cadastro.css">
     <link rel="shortcut icon" href="/assets/icone.png">
     
 
@@ -61,22 +58,6 @@
                             </div>
                             <input type="submit" value="Enviar"/>
                         </form>
-
-                        <?php
-                            if((!empty($_POST['nome']) and ($_POST['telefone']) and ($_POST['rfid']) and ($_POST['cep']) ) ){
-                                $nome = $_POST['nome'];
-                                $telefone = $_POST['telefone'];
-                                $rfid = $_POST['rfid'];
-                                $cep = $_POST['cep'];
-
-                                $erro = 0;
-
-                                $sqli = mysqli_query("INSERT INTO recycle(nome, telefone, rfid, cep)
-                                    VALUES('$nome, $telefone, $rfid, $cep')");
-
-                                    echo "<h1>Cadastro feito com sucesso</h1>";
-                                    }
-                        ?>
 
                         <a href="/index.html">Voltar para página inicial</a>
 

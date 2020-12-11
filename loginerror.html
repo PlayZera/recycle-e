@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LogIn</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="cadastro.css">
+    <link rel="shortcut icon" href="icone.png">
+</head>
+<body>
+    
+    <header>
+        <h1>Digite novamente seu RFID</h1><br>
+        <h1>Parece que o RFID é invalido</h1>
+    </header>
+
+    <main>
+    <div class="container">
+        <form action="login.php" method="POST">
+            <div class="omrs-input-group">
+                <label class="omrs-input-underlined">
+                    <input required name="rfid">
+                        <span class="omrs-input-label">RFID</span>
+                        <span class="omrs-input-helper">Informe sua RFID para fazer login</span>
+           
+                </label>
+         </div>
+        
+            <input id="enviar" type="submit" value="Enviar"/>
+        </form>
+    </div> 
+</main>
+</body>
+</html>

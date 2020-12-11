@@ -17,6 +17,10 @@
     background-color: whitesmoke;
   }
 
+  h1, h2, h3, h4, h5, h6{
+	font-family: 'Epilogue', sans-serif;
+	color: var(--tittle-color);
+  }
 
   #land{
     background-image: url(cadastro.png);
@@ -26,7 +30,7 @@
     background-size: 80%;
   }
 
-  header h1{
+  h1{
       margin: 50px;
       color: var(--tittle-color)
   }
